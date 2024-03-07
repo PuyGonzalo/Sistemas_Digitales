@@ -1,4 +1,4 @@
-# Sistemas_Digitales
+# Sistemas Digitales (86.41)
 
 Repositorio para los trabajos prácticos de la materia Sistemas Digitales (86.41). Dichos trabajos estan todos realizados en lenguaje de descripción de hardware VHDL.
 
