@@ -1,0 +1,111 @@
+[*]
+[*] GTKWave Analyzer v3.3.115 (w)1999-2023 BSI
+[*] Tue Mar  5 07:18:28 2024
+[*]
+[dumpfile] "/home/gonzalop/Documents/86.41.Sistemas Digitales/Trabajos_Practicos/TP_FINAL/Codigo/Simulacion/tp.vcd"
+[dumpfile_mtime] "Tue Mar  5 07:12:37 2024"
+[dumpfile_size] 57487844
+[savefile] "/home/gonzalop/Documents/86.41.Sistemas Digitales/Trabajos_Practicos/TP_FINAL/Codigo/Simulacion/wf.gtkw"
+[timestart] 0
+[size] 1834 1016
+[pos] 86 27
+*-39.005604 3614000000000 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1
+[treeopen] tp_testbench_1.
+[treeopen] tp_testbench_1.dut.
+[treeopen] tp_testbench_1.dut.cordic_control.
+[sst_width] 233
+[signals_width] 238
+[sst_expanded] 1
+[sst_vpaned_height] 289
+@200
+-Señales de entrada:
+@28
+tp_testbench_1.clk_tb
+tp_testbench_1.rst_tb
+@200
+-
+-Señales de salida:
+@421
+tp_testbench_1.xo_tb[15:0]
+tp_testbench_1.yo_tb[15:0]
+@28
+tp_testbench_1.ack_tb
+@200
+-
+-RX CONTROL:
+@820
+tp_testbench_1.dut.rx_control.rx_data[7:0]
+@28
+tp_testbench_1.dut.rx_control.rx_data_rdy_re
+@200
+-
+@28
+[color] 1
+tp_testbench_1.dut.rx_control.idle_p
+[color] 1
+tp_testbench_1.dut.rx_control.process_a_cordic_p
+[color] 1
+tp_testbench_1.dut.rx_control.process_c_cordic_p
+@200
+-
+@28
+tp_testbench_1.dut.rx_control.cordic_ack_re
+tp_testbench_1.dut.rx_control.cordic_enable
+tp_testbench_1.dut.rx_control.continuous_mode
+tp_testbench_1.dut.rx_control.sign_en
+@420
+tp_testbench_1.dut.rx_control.ang[15:0]
+tp_testbench_1.dut.rx_control.z_o[15:0]
+@200
+-
+-CORDIC CONTROL:
+@28
+tp_testbench_1.dut.cordic_control.cordic_clk
+@200
+-
+@28
+[color] 1
+tp_testbench_1.dut.cordic_control.initial_p
+[color] 1
+tp_testbench_1.dut.cordic_control.idle_p
+[color] 1
+tp_testbench_1.dut.cordic_control.conversion_p
+[color] 1
+tp_testbench_1.dut.cordic_control.c_conversion_p
+[color] 1
+tp_testbench_1.dut.cordic_control.cordic_a_p
+[color] 1
+tp_testbench_1.dut.cordic_control.cordic_c_p
+@200
+-
+-CORDIC:
+@28
+tp_testbench_1.dut.cordic_control.cordic.req
+tp_testbench_1.dut.cordic_control.cordic.ack
+@200
+-
+-PRE CORDIC
+@420
+tp_testbench_1.dut.cordic_control.cordic.x_i_precordic[15:0]
+[color] 3
+tp_testbench_1.dut.cordic_control.cordic.y_i_precordic[15:0]
+[color] 5
+tp_testbench_1.dut.cordic_control.cordic.z_i_precordic[15:0]
+tp_testbench_1.dut.cordic_control.cordic.x_o_precordic[15:0]
+[color] 3
+tp_testbench_1.dut.cordic_control.cordic.y_o_precordic[15:0]
+[color] 5
+tp_testbench_1.dut.cordic_control.cordic.z_o_precordic[15:0]
+@200
+-
+-
+-POST CORDIC
+@420
+tp_testbench_1.dut.cordic_control.cordic.x_i_postcordic[15:0]
+[color] 3
+tp_testbench_1.dut.cordic_control.cordic.y_i_postcordic[15:0]
+tp_testbench_1.dut.cordic_control.cordic.x_o[15:0]
+[color] 3
+tp_testbench_1.dut.cordic_control.cordic.y_o[15:0]
+[pattern_trace] 1
+[pattern_trace] 0

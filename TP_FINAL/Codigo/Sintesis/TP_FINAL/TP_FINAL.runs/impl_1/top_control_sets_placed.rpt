@@ -1,0 +1,95 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
+| Date         : Tue Mar  5 08:26:07 2024
+| Host         : Gonzalo-Laptop running 64-bit Ubuntu 22.04.4 LTS
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7z010
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    17 |
+|    Minimum number of control sets                        |    17 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    60 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    17 |
+| >= 0 to < 4        |     1 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     2 |
+| >= 8 to < 10       |     3 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     6 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |               9 |            6 |
+| No           | No                    | Yes                    |              87 |           26 |
+| No           | Yes                   | No                     |              18 |            7 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |              83 |           36 |
+| Yes          | Yes                   | No                     |              55 |           17 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++--------------------------------------+---------------------------------------------------------------------------+--------------------------------------------------------------------------+------------------+----------------+--------------+
+|             Clock Signal             |                               Enable Signal                               |                             Set/Reset Signal                             | Slice Load Count | Bel Load Count | Bels / Slice |
++--------------------------------------+---------------------------------------------------------------------------+--------------------------------------------------------------------------+------------------+----------------+--------------+
+|  FSM_sequential_state_reg[2]_i_2_n_0 |                                                                           |                                                                          |                1 |              2 |         2.00 |
+|  clk_IBUF_BUFG                       | RX_CONTROL/UART/uart_rx_i0/uart_rx_ctl_i0/over_sample_cnt                 | RX_CONTROL/UART/meta_harden_rst_i0/rst_clk_rx                            |                2 |              4 |         2.00 |
+|  clk_IBUF_BUFG                       | RX_CONTROL/UART/uart_rx_i0/uart_rx_ctl_i0/FSM_sequential_state[1]_i_1_n_0 | RX_CONTROL/UART/meta_harden_rst_i0/rst_clk_rx                            |                1 |              4 |         4.00 |
+|  clk_IBUF_BUFG                       | RX_CONTROL/UART/uart_rx_i0/uart_rx_ctl_i0/rx_data_rdy_reg_1[0]            | rst_IBUF                                                                 |                4 |              4 |         1.00 |
+|  FSM_sequential_state_reg[2]_i_2_n_0 | CORDIC_CONTROL/CORDIC/CORDIC_I/count[3]_i_1_n_0                           | rst_IBUF                                                                 |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG                       |                                                                           | RX_CONTROL/UART/uart_rx_i0/uart_baud_gen_rx_i0/internal_count[6]_i_1_n_0 |                2 |              7 |         3.50 |
+|  clk_IBUF_BUFG                       |                                                                           |                                                                          |                5 |              7 |         1.40 |
+|  clk_IBUF_BUFG                       | RX_CONTROL/UART/uart_rx_i0/uart_rx_ctl_i0/E[0]                            | rst_IBUF                                                                 |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG                       | RX_CONTROL/UART/uart_rx_i0/uart_rx_ctl_i0/state_reg[2][0]                 | rst_IBUF                                                                 |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG                       | RX_CONTROL/UART/uart_rx_i0/uart_rx_ctl_i0/state_reg[3][0]                 | rst_IBUF                                                                 |                3 |              9 |         3.00 |
+|  clk_IBUF_BUFG                       |                                                                           | RX_CONTROL/UART/meta_harden_rst_i0/rst_clk_rx                            |                5 |             11 |         2.20 |
+|  clk_IBUF_BUFG                       | RX_CONTROL/UART/uart_rx_i0/uart_rx_ctl_i0/state_reg[0]_0[0]               | rst_IBUF                                                                 |               12 |             16 |         1.33 |
+|  FSM_sequential_state_reg[2]_i_2_n_0 | CORDIC_CONTROL/z_i[15]_i_2_n_0                                            | CORDIC_CONTROL/z_i[15]_i_1_n_0                                           |                3 |             16 |         5.33 |
+|  FSM_sequential_state_reg[2]_i_2_n_0 | CORDIC_CONTROL/z_i[15]_i_2_n_0                                            | CORDIC_CONTROL/x_i[15]_i_1_n_0                                           |               11 |             31 |         2.82 |
+|  FSM_sequential_state_reg[2]_i_2_n_0 | CORDIC_CONTROL/CORDIC/CORDIC_I/E[0]                                       | rst_IBUF                                                                 |                8 |             32 |         4.00 |
+|  clk_IBUF_BUFG                       |                                                                           | rst_IBUF                                                                 |               13 |             36 |         2.77 |
+|  FSM_sequential_state_reg[2]_i_2_n_0 |                                                                           | rst_IBUF                                                                 |               13 |             51 |         3.92 |
++--------------------------------------+---------------------------------------------------------------------------+--------------------------------------------------------------------------+------------------+----------------+--------------+
+
+
